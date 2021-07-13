@@ -1,0 +1,210 @@
+/* * {
+    background-color : gray 
+} */
+
+body {
+    background-color: #e9c46a;
+}
+
+button {
+    font-size: 30px;
+    background-color: #f4a261;
+}
+
+
+/* Apply property to multiple selectors  */
+
+h1,
+h2 {
+    color: #2a9d8f;
+}
+
+#signup {
+    background-color: #264653;
+    color: #0096c7;
+}
+
+span {
+    color: #bdb2ff;
+}
+
+.tags {
+    background-color: #e76f51;
+}
+
+
+/* DESCENDANT SELECTOR - something nested inside something */
+
+
+/* NOTE: Gorup similar things in class and then apply css */
+
+.post a {
+    color: #003049;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+footer a {
+    color: #8338ec;
+}
+
+
+/* Adjacent selection (combinators) */
+
+
+/* Select only the paragraphs that are immediately preceded by something */
+
+h2+button {
+    background-color: pink;
+    font-size: 20px;
+}
+
+
+/* DIRECT CHILD: Direct decesdant */
+
+
+/* Select only the li's that are direct children of a <div> element --> div > li */
+
+footer>a {
+    color: maroon;
+}
+
+
+/* ATTRIBUTE SELETOR 
+- E.g. Select all input elements 
+*/
+
+input[type="password"] {
+    color: orange;
+}
+
+
+/* section[class="post"] {
+    background-color: rebeccapurple;
+} */
+
+a[href*="google"] {
+    color: red;
+}
+
+
+/* PSEUDO CLASSES - mofifiers 
+   - Keywords added to a selector that specifies a special state of the selected element(s)
+
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+: active 
+: checked
+: first
+: :first-child
+: hover
+: not()
+: :nth-child()
+: :nth-of-type()
+   */
+
+.post button:hover {
+    background-color: tomato;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button:active {
+    background-color: #2a9d8f;
+}
+
+.post:nth-of-type(3) {
+    background-color: #f07c29;
+}
+
+
+/* Every 4th element */
+
+.post:nth-of-type(4n) {
+    background-color: #f04729;
+}
+
+
+/* PSEUDO ELEMENTS - mofifiers 
+   - Avoid these as very little of them use pseudo elements
+
+   https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+
+: after 
+: before 
+: ::first-letter
+: ::first-line
+: ::selection
+   */
+
+h2::first-letter {
+    font-size: 35px;
+}
+
+p::first-line {
+    color: #8338ec;
+}
+
+
+/* Change selection color style */
+
+p::selection {
+    background-color: #f07c29;
+}
+
+
+/* CASCADE
+    Order really matters for stylesheet. Last one wins.
+*/
+
+
+/* Above is overrriden */
+
+h1,
+h2 {
+    color: yellow;
+}
+
+
+/* SPECIFICITY 
+    How browser decides which rules to apply in case of conflict.
+    Non conflict styles are still applied
+*/
+
+
+/* 1. See that vote buttons are still tomato on hover and not olive 
+    ID (#) > 
+    CLASS (.) (Attributes & Pseduo class selectors) > 
+    ELEMENT SELETORS (like p div , etc)
+
+    Link for specifictity calculators : https://specificity.keegan.st/
+*/
+
+.post button:hover {
+    background-color: tomato;
+    color: white;
+}
+
+button:hover {
+    background-color: olive;
+}
+
+
+/* 2. INLINE STYLES are more specific than id and others, so NEVER use them
+    See SignUp Color after commenting below
+
+    IMPORTANT -> !important -> MOST/SUPER SPECIFIC thing and override them 
+    External library which can't be overriden
+*/
+
+button {
+    background-color: magenta !important;
+}
+
+
+/* 3. CSS INHERITENCE 
+
+*/

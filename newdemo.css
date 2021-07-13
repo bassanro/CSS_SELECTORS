@@ -1,0 +1,30 @@
+/* Inspect element and see what is inherited */
+
+body {
+    color: mediumblue;
+}
+
+h1 {
+    color: blue;
+}
+
+section {
+    color: maroon;
+}
+
+form {
+    color: peru;
+}
+
+
+/* Certain elements don't inherit, can make it explicit */
+
+button {
+    color: inherit;
+    background-color: purple;
+    border-radius: 5px;
+}
+
+input {
+    border-radius: 5px;
+}
