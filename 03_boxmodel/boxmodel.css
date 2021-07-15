@@ -20,7 +20,7 @@ h1 {
 Note that now the size is 200+5+5 = 210px on either side 
  
 
-IMP: Now if we specific box-sizing as border-box then width includes the border.
+IMP: Now if we specify box-sizing as border-box then width includes the border.
 Now it will be 200 with including 10px border.
 
 */

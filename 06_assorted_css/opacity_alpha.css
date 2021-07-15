@@ -1,0 +1,48 @@
+/* rgba (R,G,B,Alpa) 
+    Alpha -> 0 - 1
+
+ */
+
+section {
+    width: 500px;
+    height: 300px;
+    background-color: #6c757d;
+    border: 1px solid black;
+}
+
+#rgba {
+    width: 50%;
+    height: 50%;
+    background-color: rgb(173, 181, 189, 0.7);
+    margin-left: 07rem;
+    margin-top: 6rem;
+    display: inline-block;
+    text-align: center;
+}
+
+
+/* OPACITY: 
+   Entire element, content and descendenta transparency 
+*/
+
+#opactity {
+    width: 50%;
+    height: 50%;
+    background-color: rgb(255, 205, 178, 0.7);
+    margin-left: 07rem;
+    margin-top: 6rem;
+    display: inline-block;
+    text-align: center;
+    opacity: 0.5;
+}
+
+#rgba2 {
+    width: 50%;
+    height: 50%;
+    /* Last 2 digits are from 00(transparent) to FF (dark)*/
+    background-color: #49505720;
+    margin-left: 07rem;
+    margin-top: 6rem;
+    display: inline-block;
+    text-align: center;
+}

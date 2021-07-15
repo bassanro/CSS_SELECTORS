@@ -1,0 +1,74 @@
+/* 
+
+*/
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: #b8f2e6;
+    border: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+}
+
+#middle {
+    background-color: #5e6472;
+}
+
+
+/* STATIC - DEFAULT
+The element is positioned according to the normal flow of the document. 
+The top, right, bottom, left, and z-index properties have no effect. This is the default value.
+ */
+
+#static #middle {
+    position: static;
+    top: 500px;
+}
+
+
+/* RELATIVE
+The element is positioned according to the normal flow of the document, 
+and then offset relative to itself based on the values of top, right, bottom, and left. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were static.
+ */
+
+#relative #middle {
+    position: relative;
+    /* offset from current position and will not touch other elements */
+    top: 50px;
+    left: 100px;
+    z-index: -10;
+}
+
+
+/* ABSOLUTE
+The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor, if any; otherwise, it is placed relative to the initial containing block. Its final position is determined by the values of top, right, bottom, and left.
+*/
+
+#absolute {
+    position: relative;
+}
+
+
+/* This is positioned relative to parent i.e. absolute */
+
+#absolute #middle {
+    position: absolute;
+    top: 100px;
+    left: 150px;
+}
+
+
+/* 
+The element is removed from the normal document flow, and no space is created for the element 
+in the page layout. It is positioned relative to the initial containing block established by the viewport,
+
+This will alwys be fixed on page away from normal DOM
+Used for NAV BARS 
+*/
+
+#fixed #middle {
+    position: fixed;
+    top: 100px;
+    left: 80%;
+}

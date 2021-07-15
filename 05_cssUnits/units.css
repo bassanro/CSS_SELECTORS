@@ -1,4 +1,4 @@
-section {
+#ems section {
     background-color: #5c4d7d;
     width: 800px;
     height: 800px;
@@ -7,17 +7,17 @@ section {
 
 /* 50% of parent size ie <section> */
 
-div {
+#ems div {
     background-color: #892b64;
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
 }
 
 
 /* 200% of 40 = 80px */
 
-h1 {
-    font-size: 40px;
+#ems h1 {
+    font-size: 30px;
     border: 1px solid black;
     line-height: 200%;
 }
@@ -29,11 +29,11 @@ h1 {
     2em's = 2 * font-size of parent
 */
 
-h3 {
+#ems h3 {
     font-size: 0.5em;
 }
 
-p {
+#ems p {
     font-size: 1em;
 }
 
@@ -45,13 +45,13 @@ p {
    4em -> margin-left = 80px
 */
 
-h2 {
+#ems h2 {
     /* font-size: 2em; */
     font-size: 1em;
     margin-left: 1em;
 }
 
-button {
+#emsbutton {
     font-size: 30px;
     padding: 0 30px;
     border-radius: 15px;
@@ -59,8 +59,8 @@ button {
     color: #ffc300;
 }
 
-article {
-    font-size: 50px;
+#ems article {
+    font-size: 20px;
 }
 
 
@@ -68,11 +68,52 @@ article {
    will grow all the button elements proptionatly
 */
 
-.buttonMe {
+#ems .buttonMe {
     background-color: #9e2a2b;
     color: #fff3b0;
     /* Relative to 20px */
     font-size: 1em;
     padding: 0 1em;
     border-radius: 0.5em;
+}
+
+
+/* Nested UL's keep stacking */
+
+#ems ul {
+    font-size: 1.5em;
+}
+
+
+/* EMS: 
+    Relative to the root html element's font-size.
+    i.e. same for entire document
+    If the root font-size is 20px, 1 rem is always 20px, 2rem is always 40px, etc
+*/
+
+#ems div ul {
+    color: white;
+}
+
+#rems h2 {
+    font-size: 3rem;
+}
+
+#rems h3 {
+    font-size: 2rem;
+}
+
+#rems ul {
+    font-size: 0.8rem;
+}
+
+
+/* See how all rem changes with html (root) font-size */
+
+html {
+    font-size: 30px;
+}
+
+#rems button {
+    font-size: 1.8rem;
 }
