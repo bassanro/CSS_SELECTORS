@@ -1,0 +1,78 @@
+section {
+    background-color: #5c4d7d;
+    width: 800px;
+    height: 800px;
+}
+
+
+/* 50% of parent size ie <section> */
+
+div {
+    background-color: #892b64;
+    width: 50%;
+    height: 50%;
+}
+
+
+/* 200% of 40 = 80px */
+
+h1 {
+    font-size: 40px;
+    border: 1px solid black;
+    line-height: 200%;
+}
+
+
+/* EMs and REM's 
+
+    1em = font-size of parent
+    2em's = 2 * font-size of parent
+*/
+
+h3 {
+    font-size: 0.5em;
+}
+
+p {
+    font-size: 1em;
+}
+
+
+/* 1EM = font'size of element itself
+   NOTE: The margin changes relateive to font-size instead of parent for margin
+
+   2em -> margin-left = 40px
+   4em -> margin-left = 80px
+*/
+
+h2 {
+    /* font-size: 2em; */
+    font-size: 1em;
+    margin-left: 1em;
+}
+
+button {
+    font-size: 30px;
+    padding: 0 30px;
+    border-radius: 15px;
+    background-color: #003566;
+    color: #ffc300;
+}
+
+article {
+    font-size: 50px;
+}
+
+
+/* See how changing the article font-size
+   will grow all the button elements proptionatly
+*/
+
+.buttonMe {
+    background-color: #9e2a2b;
+    color: #fff3b0;
+    /* Relative to 20px */
+    font-size: 1em;
+    padding: 0 1em;
+    border-radius: 0.5em;
+}

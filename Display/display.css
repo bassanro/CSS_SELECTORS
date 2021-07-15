@@ -1,0 +1,70 @@
+/* This is block level */
+
+h1 {
+    background-color: palegoldenrod;
+    border: 1px solid black;
+    /* Stop breakline before and after by using inline instead of block */
+    /* display: inline; */
+}
+
+
+/* This is inline level */
+
+span {
+    background-color: palevioletred;
+    border: 1px solid black;
+    /* Nothing happens with width since width and height is ignored for inline */
+    width: 20px;
+    /* Respected horizontally */
+    margin: 20px;
+    /* See how padding is respected and breaks out of UI i.e. doesn't push contents away 
+    Clearly the content is not ignored.
+    */
+    padding: 20px;
+    /* display: block; */
+}
+
+h1 {
+    width: 300px;
+    height: 200px;
+    padding: 50px;
+    margin: 10px;
+}
+
+
+/* INLINE-BLOCK : Behaves as inline block but 
+    WIDTH, HEIGHT, MARGIN, and PADDING are respected. 
+*/
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: olivedrab;
+    border: 5px solid black;
+    /* See width and height is not respected in inline */
+    /* display: inline; */
+    display: inline-block;
+    margin: 10px;
+}
+
+
+/* HIDE THE ELEMENT */
+
+.temp {
+    display: none;
+}
+
+.styling span {
+    background-color: palevioletred;
+    border: 1px solid black;
+    /* Nothing happens with width since width and height is ignored for inline */
+    width: 10px;
+    /* Respected horizontally */
+    margin: 10px;
+    /* See how padding is respected and breaks out of UI i.e. doesn't push contents away 
+    Clearly the content is not ignored.
+    */
+    padding: 10px;
+    /* See how inline Block pushes content out */
+    display: inline-block;
+}

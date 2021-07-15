@@ -1,0 +1,108 @@
+/* Height and Width : InnerContextArea */
+
+div {
+    width: 200px;
+    background-color: #afdbee;
+}
+
+h1 {
+    background-color: #b0e0f5;
+    width: 200px;
+    padding-left: 100px;
+    padding-top: 50px;
+}
+
+
+/* ====================================================================================== */
+
+
+/* Border - line surrounding the corners 
+Note that now the size is 200+5+5 = 210px on either side 
+ 
+
+IMP: Now if we specific box-sizing as border-box then width includes the border.
+Now it will be 200 with including 10px border.
+
+*/
+
+#one {
+    border-width: 5px;
+    border-color: #577590;
+    border-style: solid;
+    background-color: khaki;
+    box-sizing: border-box;
+}
+
+#two {
+    border-width: 2px;
+    border-color: #577590;
+    border-style: solid;
+    background-color: khaki;
+    box-sizing: border-box;
+    border-left-width: 5px;
+    padding-right: 20px;
+}
+
+#three {
+    border-color: #43aa8b;
+    border: 4px solid red;
+    box-sizing: border-box;
+    border-left-style: dotted;
+    border-radius: 4px;
+}
+
+img {
+    /* Use to make circular images */
+    border-radius: 50%;
+    width: 200px;
+    margin-top: 20px;
+}
+
+
+/* PADDING -> Like shipping box padding 
+    space between text and border
+*/
+
+#three {
+    padding: 5px;
+}
+
+button {
+    /* padding: 20px; */
+    /* TOP BOTTOM */
+    /* TOP RIGHT BOTTOM LEFT*/
+    /* VERTICAL | HORIZONTAL */
+    padding: 5px 10px;
+}
+
+
+/* ====================================================================================== */
+
+
+/* MARGIN -> Spacing outside of border 
+   Body has default margin of 8px 
+   
+   NOTE: Margin always overlap, see two and three has combined 8px
+*/
+
+body,
+h1 {
+    margin: 0;
+}
+
+#one,
+#two,
+#three {
+    margin: 8px;
+}
+
+
+/* ====================================================================================== */
+
+
+/* INLINE elements fits in alongside other elements. 
+   BLOCK level elements take up a whole "block"of space
+
+DISPLAY : INLINE , BLOCK , INLINE-BLOCK
+
+ */
