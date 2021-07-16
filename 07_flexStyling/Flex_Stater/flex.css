@@ -1,0 +1,112 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    background-color: #003049;
+    width: 90%;
+    height: 500px;
+    margin: 0 auto;
+    border: 5px solid #003049;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-direction: row;
+    justify-content: flex-start;
+    /* ABOVE 2 ARE DEFAULTS */
+    justify-content: flex-end;
+    justify-content: center;
+    /* Distribute only between but not outside */
+    justify-content: space-between;
+    /* Will provide space on left and right - not good */
+    justify-content: space-around;
+    /* Even between every element and container */
+    justify-content: space-evenly;
+    /* Reset */
+    /* justify-content: flex-start; */
+    /* flex-direction: column; */
+    /* JUSTIFY CONTENT CAN BE for HORIZONTAL AND VERTICAL */
+    /* RESET IT BACK  */
+    justify-content: center;
+}
+
+section div {
+    width: 100px;
+    height: 100px;
+}
+
+img {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+}
+
+
+/* 
+MAIN AXIS ->  (horizontal : left to right)
+CROSS AXIS -> (vertical: top to bottom)
+
+FLEX DIRECTION : Allows us to set direction in container
+default is ROW
+
+*/
+
+
+/* FLEX WRAP - element are going to wrap along main axis */
+
+
+/* #container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+} */
+
+
+/* VERY IMPORTANT  
+=========================================================
+ */
+
+
+/* JUSTIFY CONTENT -> Main Axis Distribution 
+    Horizontally for horizontal elements 
+    Veritically for verical elements
+*/
+
+
+/* ALIGN ITEMS -> Cross Axis Distriution 
+    Veritically for horizontal elements 
+    Horizontally for verical elements
+*/
+
+
+/* VERY IMPORTANT  
+=========================================================
+ */
+
+div:nth-of-type(3) {
+    /* height: 300px; */
+}
+
+div:nth-of-type(5) {
+    /* height: 100px; */
+}
+
+#container {
+    /* Cross axis end */
+    align-items: flex-end;
+    align-items: center;
+    font-size: 4em;
+    align-items: flex-end;
+    text-align: center;
+}
+
+
+/* ALIGN SELF - used for one item */
+
+div:nth-of-type(3) {
+    align-self: center;
+}
