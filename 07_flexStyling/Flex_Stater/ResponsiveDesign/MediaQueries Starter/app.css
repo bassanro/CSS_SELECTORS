@@ -1,0 +1,99 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@media 
+   Breakpoint : 
+
+      min-width: 576px  : Small devices
+      min-width: 768px  : Medium devices (tablets)
+      min-width: 992px  : Large devices (desktops/Laptops)
+      min-width: 1200px : Extra Large devices 
+*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+
+nav {
+    font-size: 1.5em;
+}
+
+ul,
+li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* @media (min-width:600px) and (max-width: 800px) {
+    h1 {
+        color: purple;
+    }
+} */
+
+h1 {
+    color: red;
+}
+
+@media (min-width: 500px) {
+    h1 {
+        color: orange;
+    }
+}
+
+@media (min-width: 1000px) {
+    h1 {
+        color: yellowgreen;
+    }
+}
+
+@media (min-width: 1500px) {
+    h1 {
+        color: green;
+    }
+}
+
+
+/* Rotated phone image */
+
+@media (orientation: landscape) {
+    body {
+        background-color: greenyellow;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    border: 1px solid red;
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+    nav,
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
